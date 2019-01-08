@@ -1,15 +1,15 @@
 # VS1053-based Music Player for Arduino
 
-Plays MP1-MP3, Ogg Vorbis, AAC, WAV, WMA, MIDI (potentially FLAC)
-Up to 48kHz 320kb/s MP3 playback (with restrictions, check the datasheet page 26 onwards)
-Records to Ogg Vorbis (multiple profiles, 44.1kHz 87kb/s used)
-Stereo Audio via a 3.5mm jack, up to a 30 ohm load
-External microphone (3.5mm jack) can be used, or internal electret mic
-Bass/Treble controls possible, but not implemented except via serial control
-Has a playlist for playback (limited by SRAM, 2 bytes per file) which is needed so that you can easily go back multiple tracks
-Controlled via a 4x4 matrix keypad or serial input
-16x4 LCD screen connected via an I2C adaptor
-8.3 filename restriction (although larger filenames can be played, with varying results)
+* Plays MP1-MP3, Ogg Vorbis, AAC, WAV, WMA, MIDI (potentially FLAC)
+* Up to 48kHz 320kb/s MP3 playback (with restrictions, check the datasheet page 26 onwards)
+* Records to Ogg Vorbis (multiple profiles, 44.1kHz 87kb/s used)
+* Stereo Audio via a 3.5mm jack, up to a 30 ohm load
+* External microphone (3.5mm jack) can be used, or internal electret mic
+* Bass/Treble controls possible, but not implemented except via serial control
+* Has a playlist for playback (limited by SRAM, 2 bytes per file) which is needed so that you can easily go back multiple tracks
+* Controlled via a 4x4 matrix keypad or serial input
+* 16x4 LCD screen connected via an I2C adaptor
+* 8.3 filename restriction (although larger filenames can be played, with varying results)
 And more
 
 **Pin Connections**
@@ -33,10 +33,11 @@ Keypad, pin 1 of the keypad is the far left column, pin 5 the top row. Ergo, cha
 This library is for use with a VS1053-based (http://www.vlsi.fi/en/products/vs1053.html) Arduino shield with an Arduino Uno in particular, but will work on similar boards.
 This library was tested using a Geeetech Arduino MP3 shield board (http://www.geeetech.com/wiki/index.php/Arduino_MP3_shield_board_with_TF_card), which is a pseudo-clone board. The library will likely work with the original SparkFun version as well (https://www.sparkfun.com/products/12660) although I do not have one to test with. Originally published in Silicon Chip magazine, July 2017; wiring diagram and more details provided in that article.
 
-It needs the libraries:
-SdFat (https://github.com/greiman/SdFat)
-SFEMPShield (https://github.com/madsci1016/Sparkfun-MP3-Player-Shield-Arduino-Library)
-LiquidCrystal_I2C (https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library)
+It needs the third-party libraries:
+1. SdFat (https://github.com/greiman/SdFat)
+2. SFEMPShield (https://github.com/madsci1016/Sparkfun-MP3-Player-Shield-Arduino-Library)
+3. LiquidCrystal_I2C (https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library)
+
 The LiquidCrystal library is especially annoying as there are multiple different versions around that are similar but use different function headers.
 I've included most of the libraries as zips incase they differ greatly from the versions found online, or can't be found.
 
