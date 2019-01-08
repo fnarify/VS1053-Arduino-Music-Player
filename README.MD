@@ -37,6 +37,7 @@ It needs the third-party libraries:
 1. SdFat (https://github.com/greiman/SdFat)
 2. SFEMPShield (https://github.com/madsci1016/Sparkfun-MP3-Player-Shield-Arduino-Library)
 3. LiquidCrystal_I2C (https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library)
+4. Keypad https://github.com/Chris--A/Keypad
 
 The LiquidCrystal library is especially annoying as there are multiple different versions around that are similar but use different function headers.
 I've included most of the libraries as zips incase they differ greatly from the versions found online, or can't be found.
