@@ -1,4 +1,4 @@
-VS1053-based Music Player for Arduino
+# VS1053-based Music Player for Arduino
 
 Plays MP1-MP3, Ogg Vorbis, AAC, WAV, WMA, MIDI (potentially FLAC)
 Up to 48kHz 320kb/s MP3 playback (with restrictions, check the datasheet page 26 onwards)
@@ -12,7 +12,8 @@ Controlled via a 4x4 matrix keypad or serial input
 8.3 filename restriction (although larger filenames can be played, with varying results)
 And more
 
-Pin Connections
+**Pin Connections**
+```
 From -> To
 LCD SDA -> A4
 LCD SCL -> A5
@@ -27,6 +28,7 @@ Keypad, pin 1 of the keypad is the far left column, pin 5 the top row. Ergo, cha
 6 -> D4
 7 -> D5
 8 -> D0 (also serial output, no spare pins, sometimes outputs garbage to the serial monitor, but doesn't affect the program operation)
+```
 
 This library is for use with a VS1053-based (http://www.vlsi.fi/en/products/vs1053.html) Arduino shield with an Arduino Uno in particular, but will work on similar boards.
 This library was tested using a Geeetech Arduino MP3 shield board (http://www.geeetech.com/wiki/index.php/Arduino_MP3_shield_board_with_TF_card), which is a pseudo-clone board. The library will likely work with the original SparkFun version as well (https://www.sparkfun.com/products/12660) although I do not have one to test with. Originally published in Silicon Chip magazine, July 2017; wiring diagram and more details provided in that article.
