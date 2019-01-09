@@ -12,6 +12,13 @@
 * 8.3 filename restriction (although larger filenames can be played, with varying results)
 And more
 
+**For this project you will need**
+1. Arduino Uno or similar;
+2. Geeetech VS1053 MP3 shield or similar;
+3. 16x4 LCD screen with I2C serial backpack;
+4. 8-pin 4x4 matrix keypad;
+5. jumper wires, cables and a microSD card.
+
 **Pin Connections**
 ```
 From -> To
