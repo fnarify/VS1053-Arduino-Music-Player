@@ -37,6 +37,54 @@ Keypad, pin 1 of the keypad is the far left column, pin 5 the top row. Ergo, cha
 8 -> D0 (also serial output, no spare pins, sometimes outputs garbage to the serial monitor, but doesn't affect the program operation)
 ```
 
+**Controls**
+```
+In default list:
+2, 8 (up, down one line)
+4, 6 (up, down by a screen width [default 3 lines])
+5 (perform current highlighted command)
+
+Choosing a track to play:
+A - choose current value entered to play via filename trackXXX.ext where XXX is a value from 000 to 999 and ext is mp3 or ogg
+Digit - appends selected digit to the 3-digit value XXX used for above
+After selected a tracknumber to play:
+4 - select ogg file
+6 - select mp3 file
+Playback from this selection doesn't not provide the ability to alter volume etc like playlist playback provides
+
+During playback:
+4 - skip to previous song
+6 - skip to next song
+5 - pause/unpause song
+A - restart song from start
+1/3 - decrease/increase playspeed
+7/9 - decrease/increase volume
+8/* - exit playback
+
+Before recording:
+Digit - appends that number to the filename recordXX.ogg where XX are the digits chosen
+A - record to the filename recordYY.ogg where YY is initially 00 then 01 and incremented by one each time this choice is selected
+
+Sinewave test:
+Any key will stop the test
+
+Keypad map:
+-------------------FROM
+1     2     3     A
+4     5     6     B
+7     8     9     C
+*     0     #     D
+-------------------TO
+1     UP    3     A
+LEFT  ENTER RIGHT B
+7     DOWN  9     C
+BACK  0     #     D
+-------------------
+
+Serial:
+For serial commands, enter 'h' to be provided with a complete list of command characters
+```
+
 This library is for use with a VS1053-based (http://www.vlsi.fi/en/products/vs1053.html) Arduino shield with an Arduino Uno in particular, but will work on similar boards.
 This library was tested using a Geeetech Arduino MP3 shield board (http://www.geeetech.com/wiki/index.php/Arduino_MP3_shield_board_with_TF_card), which is a pseudo-clone board. The library will likely work with the original SparkFun version as well (https://www.sparkfun.com/products/12660) although I do not have one to test with. Originally published in Silicon Chip magazine, July 2017; wiring diagram and more details provided in that article.
 
