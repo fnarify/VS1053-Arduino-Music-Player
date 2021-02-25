@@ -103,3 +103,11 @@ I've included most of the patch files required and already converted. You will n
 By default it prints to a 16x4 LCD screen and the printing assumes as much. That will need to be manually altered if you want to use a smaller screen. The LCD screen I used also had a non-standard way to print per line (moving the cursor), which is why I defined the starting location of each row manually (LINE1-4).
 
 The only difference between the regular and experimental version is the experimental version has a rotating keypay function built in, so you can input the full track name to record to or play off. No real reason not to use it apart from saving a little extra space, the majority of which is taken up by the libraries.
+
+**Troubleshooting**
+
+If you experience buzzing present in recorded audio using the on-board microphone, you may need to attach a 3.6V 1W zener diode (1N4729, DO-14) with the cathode going to the 3V header on the module and the anode to GND (see https://imgur.com/a/N6OBNKy for a photo). This can be plugged into the stackable headers so it's not a permanent change. This is due to a problem with the regulator on the board causing ripple on the audio output.
+
+Also some of these modules may come with bad tracks and/or solder joints, one such example was found where the SMD resistor on the CS line of the on-board SD card had no continuity due to a very fine break on the PCB trace.
+
+These are not all the problems that can occur with the VS1053-based modules (particularly the cheaper ones available online) but the ones that I've come across.
